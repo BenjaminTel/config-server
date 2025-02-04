@@ -13,7 +13,7 @@ spring:
       group-id: tp_group
       topic:
         book: borrowed-book
-        user: max_borrowing
+        user: max-borrowing
     consumer:
       key-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
