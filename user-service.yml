@@ -12,7 +12,7 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       group-id: tp_group
       topic:
-        book: user-deleted
+        user: user-deleted
     consumer:
       key-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
