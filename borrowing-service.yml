@@ -5,6 +5,23 @@ spring:
   application:
     name: borrowing-service
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: tp_group
+      topic:
+        book: borrowed-book
+        user: max_borrowing
+    consumer:
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: tp_group
+      topic:
+        book: book-deleted
+        user: user-deleted
+
   datasource:
     url: jdbc:postgresql://localhost:5432/tp_m1_borrowing
     driver-class-name: org.postgresql.Driver
