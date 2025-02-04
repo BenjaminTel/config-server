@@ -5,6 +5,19 @@ spring:
   application:
     name: book-service
       
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: tp_group
+    consumer:
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: tp_group
+    topic:
+      book: book-deleted
+
   datasource:
     url: jdbc:postgresql://localhost:5432/tp_m1_book
     driver-class-name: org.postgresql.Driver

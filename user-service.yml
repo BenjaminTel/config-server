@@ -4,16 +4,6 @@ server:
 spring:
   application:
     name: user-service
-
-  # kafka:
-  #   bootstratp-servers: localhost:9082
-  #   consumer:
-  #     group-id: -group
-  #     auto-offset-reset: earliest
-  #     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-  #     value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-  #   properties:
-  #     enable.auto.commit: false
       
   datasource:
     url: jdbc:postgresql://localhost:5432/tp_m1_user
